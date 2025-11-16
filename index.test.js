@@ -24,4 +24,22 @@ test('2 * 5', () => {
     expect(calculator.multiply(2,5)).toBe(10)
 })
 
-test
+test('caesarCipher abc', => { 
+    expect(caesarCipher('abc', 3)).toBe('def')
+})
+
+test('caesarCipher abc shift factor 4', => { 
+    expect(caesarCipher('abc', 4)).toBe('efg')
+})
+
+test('caesarCipher xyz', => {
+    expect(caesarCipher('xyz', 3)).toBe('abc')
+})
+
+test('caesarCipher follow letercase', => {
+    expect(caesarCipher('HeLLo',3)).toBe('KhOOr')
+})
+
+test('caesarCipher punctuation', => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
+})
