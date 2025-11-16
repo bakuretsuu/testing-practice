@@ -1,4 +1,4 @@
-export { capitalize, reverseString};
+export { capitalize, reverseString, calculator};
 
 function capitalize(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -13,3 +13,21 @@ function reverseString(string){
 
     return reverse;
 }
+
+const calculator = {
+    add(a, b) {
+      return a + b;
+    },
+  
+    subtract(a, b) {
+      return a - b;
+    },
+  
+    divide(a, b) {
+      return a / b;
+    },
+  
+    multiply(a, b) {
+      return a * b;
+    }
+  };
