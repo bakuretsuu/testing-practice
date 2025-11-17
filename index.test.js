@@ -1,4 +1,5 @@
-import { capitalize, reverseString, calculator} from "./index";
+// index.test.js
+import { capitalize, reverseString, calculator, caesarCipher} from "./index";
 
 test('capitalize Bakuretsu', () => {
     expect(capitalize('bakuretsu')).toBe('Bakuretsu')
@@ -24,22 +25,22 @@ test('2 * 5', () => {
     expect(calculator.multiply(2,5)).toBe(10)
 })
 
-test('caesarCipher abc', => { 
+test('caesarCipher abc', () => { 
     expect(caesarCipher('abc', 3)).toBe('def')
 })
 
-test('caesarCipher abc shift factor 4', => { 
+test('caesarCipher abc shift factor 4', () => { 
     expect(caesarCipher('abc', 4)).toBe('efg')
 })
 
-test('caesarCipher xyz', => {
+test('caesarCipher xyz', () => {
     expect(caesarCipher('xyz', 3)).toBe('abc')
 })
 
-test('caesarCipher follow letercase', => {
+test('caesarCipher follow lettercase', () => {
     expect(caesarCipher('HeLLo',3)).toBe('KhOOr')
 })
 
-test('caesarCipher punctuation', => {
+test('caesarCipher punctuation', () => {
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
 })
