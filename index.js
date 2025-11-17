@@ -1,5 +1,5 @@
 // index.js
-export { capitalize, reverseString, calculator, caesarCipher};
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray};
 
 function capitalize(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -63,4 +63,26 @@ function caesarCipher(str, shift){
     }
 
     return result;
+}
+
+function analyzeArray(arr){
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    const average = sum / arr.length;
+
+    const sortedArr = [...arr].sort((a,b) => a - b);
+    const min = sortedArr[0];
+    const max =sortedArr[arr.length - 1];
+    const length = arr.length;
+
+    var obj = {
+        average: average,
+        min: min,
+        max: max,
+        length: length
+    }
+
+    return obj;
 }

@@ -1,5 +1,5 @@
 // index.test.js
-import { capitalize, reverseString, calculator, caesarCipher} from "./index";
+import { capitalize, reverseString, calculator, caesarCipher, analyzeArray} from "./index";
 
 test('capitalize Bakuretsu', () => {
     expect(capitalize('bakuretsu')).toBe('Bakuretsu')
@@ -46,17 +46,17 @@ test('caesarCipher punctuation', () => {
 })
 
 test('analyzeArray average is 4', () => {
-    expect(analyzeArray([1,8,3,4,2,6])).toBe(4)
+    expect(analyzeArray([1,8,3,4,2,6]).average).toBe(4)
 })
 
 test('analyzeArray min is 1', ()=>{
-    expect(analyzeArray([1,8,3,4,2,6])).toBe(1)
+    expect(analyzeArray([1,8,3,4,2,6]).min).toBe(1)
 })
 
 test('analyzeArray max is 8', () =>{
-    expect(analyzeArray([1,8,3,4,2,6])).toBe(8)
+    expect(analyzeArray([1,8,3,4,2,6]).max).toBe(8)
 })
 
 test('analyzeArray length is 6', () => {
-    expect(analyzeArray([1,8,3,4,2,6])).toBe(6)
+    expect(analyzeArray([1,8,3,4,2,6]).length).toBe(6)
 })
